@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+	<div class="header">
+	<h1>/REBOOTが少しだけ楽になるマン</h1>
+	<hr width="100%" size="1">
+	</div>
+	<h5>⚫︎使い方</h5>
+	<ol>
+		<li>rebootしたい席の数字を入力</li>
+		<li>rebootボタンを押す</li>
+		<li>遷移先のdiscordのチャンネルでペーストする</li>
+	</ol>
+	<p>以上！</p>
+<body>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin=
+"anonymous" />
+<form>
+    <label for="inputNumber3">/reboot c1r</label> <input id="inputNumber3" type="number" min="1" max="26" step="1" oninput="formatAsNumber(this)" inputmode="numeric" /> <label for=
+    "inputNumber4">s</label> <input id="inputNumber4" type="number" min="1" max="11" step="1" oninput="formatAsNumber(this)" inputmode="numeric" /> <button id="rebootButton" class=
+    "btn btn-info">Reboot Now!</button>
+</form>
+<script>
+/* <![CDATA[ */
+    function formatAsNumber(input) {
+      // 数値以外の文字を削除して、テンキー形式を維持
+      input.value = input.value.replace(/\D/g, '');
+    }
+
+    function copyToClipboard() {
+      var inputNumber1 = document.getElementById("inputNumber3").value;
+      var inputNumber2 = document.getElementById("inputNumber4").value;
+
+      var copyText = "/reboot c1r" + inputNumber1 + 's' + inputNumber2;
+
+      var copyTarget = document.createElement("textarea");
+      copyTarget.value = copyText;
+      document.body.appendChild(copyTarget);
+
+      copyTarget.select();
+      document.execCommand("Copy");
+
+      document.body.removeChild(copyTarget);
+
+      window.open("https://discord.com/channels/691903146909237289/1011095728191459449", "_blank");
+    }
+/*]]>*/
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin=
+"anonymous"></script>
+</body>
+</html>
